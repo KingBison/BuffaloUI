@@ -1,0 +1,138 @@
+body{
+  margin: 0px;
+}
+
+.game-main{
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  border: 1px solid black;
+  height: calc(100vh - 2px);
+}
+
+.game-main .game-section{
+  text-align: center;
+  border: 1px solid black;
+}
+
+.gameoptions-main button{
+  margin: 3px;
+}
+
+.ready-button, .not-ready-button, .swap-button, .queen-wait-button, .call-buffalo-button {
+  height:40px;
+  width:200px;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: large;
+}
+
+
+.ready-button{
+  background-color: green;
+}
+
+.not-ready-button{
+  background-color: red;
+}
+
+.queen-wait-button {
+  color: black;
+}
+
+.swap-button, .call-buffalo-button {
+  background-color: blue;
+}
+
+.ready-button:hover, .not-ready-button:hover, .swap-button:hover, .call-buffalo-button:hover{
+  background-color: yellow;
+  color: black;
+}
+
+.player-card{
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 2px;
+}
+
+.player-card * {
+  border: 1px solid black;
+}
+
+.player-card-ready-indicator{
+  background-color: green;
+}
+
+.player-card-not-ready-indicator{
+  background-color: green;
+}
+
+.card {
+  height: 200px;
+  width: auto;
+  border: 2px solid black;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.card:hover{
+  border: 2px solid yellow;
+}
+
+.player-hands{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.player-hands-player{
+  display: grid;
+  grid-template-rows: 20px auto;
+  margin: auto 0px;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.player-hands-card {
+  height: 80px;
+  width: auto;
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+.player-hands-card:hover {
+  border: 1px solid yellow;
+}
+
+.deck-middle {
+  padding: 100px;
+  border: 2px solid black;
+  margin: 20px auto;
+  background-color:chocolate;
+  width: 400px;
+}
+
+.deck-middle img{
+  height: 200px;
+  width: auto;
+  border: 2px solid black;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+
+  display: inline-block;
+}
+
+.deck-middle img:hover{
+  border: 2px solid yellow;
+}
+
+.deck-middle-labels {
+  color: white;
+  font-size: 20px;
+}
