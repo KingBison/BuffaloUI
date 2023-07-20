@@ -2,6 +2,7 @@ import React from "react";
 import { getCardGraphic } from "./getCardGraphic";
 import axios from "axios";
 import { handleGetServerData } from "../serverUtil";
+import { getReadyUpButton } from "./getReadyButton";
 
 const DeckMiddle = (props) => {
 
@@ -63,20 +64,22 @@ const DeckMiddle = (props) => {
     }
 
     return(<div className="deck-middle">
-        <div className="deck-middle-labels">Deck --------------- Discard</div>
-        <img src={getCardGraphic(getLookingCardSuit(),getLookingCardNumber(),getLookingCardVisible())} alt="deck" className="deck-middle-looker"
-                onClick={() => {
-                    axios.post(url+"/handleRequest", JSON.stringify({
-                        Name: name,
-                        Action: "draw"
-                    }))
-                    .then(()=>{handleGetServerData(url,setServerData)}).catch((err) => {
-                        alert(err.response.data)
-                    })
-                }}
-            />
-        <img src={getCardGraphic(getDiscardCardSuit(), getDiscardCardNumber(), true)} alt="" onClick={getDiscardPileClickAction}/>
-    </div>)
+                <div className="deck-middle-labels">Deck --------------- Discard</div>
+                <img src={getCardGraphic(getLookingCardSuit(),getLookingCardNumber(),getLookingCardVisible())} alt="deck" className="deck-middle-looker"
+                        onClick={() => {
+                            axios.post(url+"/handleRequest", JSON.stringify({
+                                Name: name,
+                                Action: "draw"
+                            }))
+                            .then(()=>{handleGetServerData(url,setServerData)}).catch((err) => {
+                                alert(err.response.data)
+                            })
+                        }}
+                    />
+                <img src={getCardGraphic(getDiscardCardSuit(), getDiscardCardNumber(), true)} alt="" onClick={getDiscardPileClickAction}/>
+                {getReadyUpButton(url,name,serverData, setServerData)}
+            </div>)
+
 }
 
 export default DeckMiddle;

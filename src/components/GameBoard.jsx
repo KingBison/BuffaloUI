@@ -27,7 +27,6 @@ const GameBoard = (props) => {
                 <PlayerHands serverData={serverData} name={name} url={url} setServerData={setServerData}/>
                 <DeckMiddle serverData={serverData} name={name} url={url} setServerData={setServerData}/>
                 <MyCards serverData={serverData} name={name} url={url} setServerData={setServerData}/>
-                {getReadyUpButton(url,name,serverData, setServerData)}
             </>)
         }
     }

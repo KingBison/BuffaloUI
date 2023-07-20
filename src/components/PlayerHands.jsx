@@ -18,7 +18,7 @@ const PlayerHands = (props) => {
         if (serverData.Game.GameStage === "resolution" || name==="Sam") {
             return(true);
         }
-        if (serverData.Game.GameStage === "playing" && visBool) {
+        if (serverData.Game.GameStage === "playing" && visBool && serverData.TurnPointer == name) {
             return(true);
         }
         return false;

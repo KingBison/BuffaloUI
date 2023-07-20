@@ -1,4 +1,5 @@
 import React from "react";
+import buffaloPng from "./card-assets/buffalo.png"
 
 const PlayerBoard = (props) => {
 
@@ -35,11 +36,20 @@ const PlayerBoard = (props) => {
         }
     }
 
+    const getBuffalo = (player) => {
+        if (player.Name === serverData.Game.WhoBuffaloCalled) {
+            return(<img className="buffalo-emoji" src={buffaloPng}/>)
+        }
+    }
+
     const getPlayerBoard = () => {
         return(serverData.Game.Players.map((player)=>{
             return(
             <div className="player-card">
-                {getMeIfMe(player)}
+                <div className="player-card-name">
+                    {getMeIfMe(player)}
+                    {getBuffalo(player)}
+                </div>
                 <div className="player-card-middle">
                     <div style={getReadyIndicatorClass(player)}>&nbsp;</div>
                     <div className="player-card-wins">Wins: {player.Wins}</div>

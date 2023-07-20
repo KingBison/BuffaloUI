@@ -61,6 +61,14 @@ body{
   border: 1px solid black;
 }
 
+.player-card-name {
+  position: relative;
+}
+
+.player-card-name *{
+  border: none;
+}
+
 .player-card-ready-indicator{
   background-color: green;
 }
@@ -70,7 +78,7 @@ body{
 }
 
 .card {
-  height: 200px;
+  height: 140px;
   width: auto;
   border: 2px solid black;
   margin: 5px;
@@ -97,7 +105,7 @@ body{
 }
 
 .player-hands-card {
-  height: 80px;
+  height: 60px;
   width: auto;
   border: 1px solid black;
   margin: 2px;
@@ -109,15 +117,16 @@ body{
 }
 
 .deck-middle {
-  padding: 100px;
+  padding: 30px;
   border: 2px solid black;
+  border-radius: 50%;
   margin: 20px auto;
   background-color:chocolate;
   width: 400px;
 }
 
 .deck-middle img{
-  height: 200px;
+  height: 160px;
   width: auto;
   border: 2px solid black;
   margin: 5px;
@@ -135,4 +144,21 @@ body{
 .deck-middle-labels {
   color: white;
   font-size: 20px;
+}
+
+.buffalo-emoji {
+  height: 30px;
+  width: auto;
+  animation: right-to-left 3s ease-in;
+  position:relative;
+  overflow: hidden;
+}
+
+@keyframes right-to-left {
+  0% {
+    right: -85vw;
+  }
+  100%{
+    right: 0px
+  }
 }

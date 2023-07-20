@@ -47,13 +47,13 @@ export const getReadyUpButton = (url, name, serverData, setServerData) => {
 
     if (player) {
         if (player.Ready){
-            return(<button className="ready-button"
-            onClick={handleToggle}
-            >Ready</button>)
-        } else {
             return(<button className="not-ready-button"
             onClick={handleToggle}
-            >Not Ready</button>)
+            >Wait, I'm not ready</button>)
+        } else {
+            return(<button className="ready-button"
+            onClick={handleToggle}
+            >I'm Ready</button>)
         }
     } else {
         return(<div>ERROR PLAYER NOT FOUND</div>)
