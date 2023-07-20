@@ -1,3 +1,7 @@
+html {
+  margin-bottom: 20px;
+}
+
 body{
   margin: 0px;
 }
@@ -5,13 +9,16 @@ body{
 .game-main{
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  border: 1px solid black;
   height: calc(100vh - 2px);
 }
 
 .game-main .game-section{
   text-align: center;
-  border: 1px solid black;
+}
+
+.game-section{
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .gameoptions-main button{
